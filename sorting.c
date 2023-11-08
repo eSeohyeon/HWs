@@ -4,7 +4,7 @@
 #define LEN 10000
 
 void swap(int *a, int *b);
-double selection_sort(int list[], int n);
+double selection_sort(int list[], int n); // 각 함수들은 소요시간을 리턴
 double bubble_sort(int list[], int n);
 double insertion_sort(int list[], int n);
 
@@ -13,8 +13,7 @@ int main(){
     int list_selection[LEN], list_bubble[LEN], list_insertion[LEN];
     double time_selection, time_bubble, time_insertion;
 
-    for(int k=0; k<100; k++){ // 100번 반복
-
+    for(int k=0; k<100; k++){ // 100번
 
         for(int i=0; i<LEN; i++){ // 랜덤으로 크기 LEN인 리스트 3개 생성
         int x;
@@ -31,7 +30,6 @@ int main(){
     
         printf("<Elapsed Time>\n\n");
         printf("Selection Sort: %lf   Bubble Sort: %lf  Insertion Sort: %lf\n\n\n", time_selection, time_bubble, time_insertion);
-
     }
 
     return 0;
