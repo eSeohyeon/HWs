@@ -13,13 +13,14 @@ int main(){
     int list_selection[LEN], list_bubble[LEN], list_insertion[LEN];
     double time_selection, time_bubble, time_insertion;
 
-    for(int i=0; i<LEN; i++){ // 랜덤으로 크기 LEN인 리스트 3개 생성
+    for(int k=0; k<100; k++){
+
+        for(int i=0; i<LEN; i++){ // 랜덤으로 크기 LEN인 리스트 3개 생성
         int x;
         x=rand()%1000000;
         list_selection[i]=x;
         list_bubble[i]=x;
         list_insertion[i]=x;
-        printf("%d\n", x);
     }
 
     time_selection=selection_sort(list_selection, LEN);
@@ -28,7 +29,8 @@ int main(){
 
     
     printf("<Elapsed Time>\n\n");
-    printf("Selection Sort: %lf   Bubble Sort: %lf  Insertion Sort: %lf\n", time_selection, time_bubble, time_insertion);
+    printf("Selection Sort: %lf   Bubble Sort: %lf  Insertion Sort: %lf\n\n\n", time_selection, time_bubble, time_insertion);
+    }
 
     return 0;
 }
